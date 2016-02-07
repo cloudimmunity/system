@@ -102,18 +102,6 @@ func NewKernelFeaturesWithProps(location string) (KernelFeatures, error) {
 
 var DefaultKernelFeatures, _ = NewKernelFeatures()
 
-func nativeCharsToString(cstr [65]int8) string {
-	max := len(cstr)
-	data := make([]byte, max)
-
-	var pos int
-	for ; (pos < max) && (cstr[pos] != 0); pos++ {
-		data[pos] = byte(cstr[pos])
-	}
-
-	return string(data[0:pos])
-}
-
 func findKernelConfigs(locations []string) string {
 	for _, loc := range locations {
 		if fileExists(loc) {
