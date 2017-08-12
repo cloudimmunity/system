@@ -1,0 +1,8 @@
+FROM alpine:latest
+
+ADD bin /opt/example
+ENTRYPOINT ["/opt/example/sdiscover_linux"]
+
+
+
+

@@ -1,0 +1,8 @@
+FROM ubuntu:14.04
+
+ADD bin /opt/example
+ENTRYPOINT ["/opt/example/sdiscover_linux"]
+
+
+
+

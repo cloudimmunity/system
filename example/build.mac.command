@@ -5,9 +5,10 @@ set -e
 here="$(dirname "$BASH_SOURCE")"
 cd $here
 source env.sh
-cd ..
-#cd src
-go fmt ./...
+cd src
+gox -osarch="darwin/amd64" -output="../bin/sdiscover_mac"
+
+
 
 
 

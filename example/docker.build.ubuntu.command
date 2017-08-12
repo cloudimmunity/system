@@ -2,4 +2,4 @@ here="$(dirname "$BASH_SOURCE")"
 cd $here
 
 #eval "$(docker-machine env default)"
-docker run --rm -it --name example my/system-example
+docker build -f Dockerfile.ubuntu -t my/system-example-ubuntu .
